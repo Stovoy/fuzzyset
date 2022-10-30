@@ -12,11 +12,7 @@ def read(fname):
 extra_kwargs = {}
 ext_files = []
 
-__version__ = "Undefined"
-with open("fuzzyset/__init__.py") as fh:
-    for line in fh:
-        if line.startswith("__version__"):
-            exec(line.strip())
+__version__ = "0.2.1"
 
 if platform.python_implementation() != 'CPython':
     sys.argv.append('--pure-python')
